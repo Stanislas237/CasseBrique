@@ -1,5 +1,6 @@
 import pygame as pg
 import random
+from imgloader import resource_path
 
 
 class Bonus(pg.sprite.Sprite):
@@ -9,7 +10,7 @@ class Bonus(pg.sprite.Sprite):
         
         self.images = {}
         for i in range(4):
-            self.images[game.bonus_list[i]] = pg.image.load(f"assets/Bonus/{game.bonus_list[i]}.png")
+            self.images[game.bonus_list[i]] = pg.image.load(resource_path(f"assets/Bonus/{game.bonus_list[i]}.png"))
         
         self.percent = 0
         

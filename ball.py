@@ -1,6 +1,7 @@
 import pygame as pg
 import random as rd
 import math
+from imgloader import resource_path
 
 
 class Ball(pg.sprite.Sprite):
@@ -12,8 +13,8 @@ class Ball(pg.sprite.Sprite):
         self.angle = 45
                
         self.images = {
-            "Ball": pg.image.load("assets/Ball.png"),
-            "blast" : pg.image.load("assets/blast.png")
+            "Ball": pg.image.load(resource_path("assets/Ball.png")),
+            "blast" : pg.image.load(resource_path("assets/blast.png"))
         }
         
         self.ball_img("Ball")

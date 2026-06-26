@@ -7,6 +7,7 @@ from ball import Ball
 from brick import Brick
 from bonus import Bonus
 from soundmanager import SoundManager as SM
+from imgloader import resource_path
 
 
 class Game:
@@ -28,7 +29,7 @@ class Game:
         self.bricks_dic = {}
         a = 0
         for i in colors:
-            image = pg.image.load(f"assets/Bricks/{i}.png")
+            image = pg.image.load(resource_path(f"assets/Bricks/{i}.png"))
             self.bricks_dic[a] = pg.transform.scale(image, (80, 30))
             a += 1
         
@@ -49,7 +50,7 @@ class Game:
         self.font = pg.font.SysFont("Arial Black", 25, True)
         
         #Les vies du joueur
-        self.live_image = pg.image.load("assets/Hearth.png")
+        self.live_image = pg.image.load(resource_path("assets/Hearth.png"))
         self.live_image = pg.transform.scale(self.live_image, (30, 30))
         
         self.start()

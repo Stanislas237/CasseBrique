@@ -1,4 +1,5 @@
 import pygame as pg
+from imgloader import resource_path
 
 
 class Player(pg.sprite.Sprite):
@@ -6,7 +7,7 @@ class Player(pg.sprite.Sprite):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        self.image = pg.image.load("assets/Player.png")
+        self.image = pg.image.load(resource_path("assets/Player.png"))
         self.image = pg.transform.scale(self.image, (80, 20))
         self.rect = self.image.get_rect()
         self.rect.centerx = game.screen.get_width() / 2

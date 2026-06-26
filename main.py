@@ -1,6 +1,8 @@
 import pygame as pg
 import random as rd
 from game import Game
+from imgloader import resource_path
+
 
 pg.init()
 
@@ -15,16 +17,16 @@ screen = pg.display.set_mode((1080, 600))
 #Charger le background
 
 i = rd.randint(1, 5)
-background = pg.image.load(f"assets/Backgrounds/bg-{i}.jpg")
+background = pg.image.load(resource_path(f"assets/Backgrounds/bg-{i}.jpg"))
 
 #Cherger la bannière et le bouton Start
-banner = pg.image.load("assets/Banner.png")
+banner = pg.image.load(resource_path("assets/Banner.png"))
 banner = pg.transform.scale(banner, (200, 100))
 banner_rect = banner.get_rect()
 banner_rect.centerx = screen.get_width() / 2
 banner_rect.y = 100
 
-start = pg.image.load("assets/Start.png")
+start = pg.image.load(resource_path("assets/Start.png"))
 start = pg.transform.scale(start, (150, 100))
 start_rect = start.get_rect()
 start_rect.centerx = screen.get_width() / 2
