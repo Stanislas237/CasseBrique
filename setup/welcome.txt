@@ -1,0 +1,17 @@
+Casse Brique - End User License Agreement
+
+Thank you for installing Casse Brique.
+
+Developed by Stan.co
+
+By installing this software you agree to the following terms:
+
+1. This game is licensed, not sold.
+2. Redistribution of the game files is prohibited.
+3. Reverse engineering is not allowed.
+
+Official Telegram:
+https://t.me/unity_engine_stan_co
+
+© 2026 Stan.co
+All rights reserved.
